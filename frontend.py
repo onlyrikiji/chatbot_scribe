@@ -3,12 +3,6 @@ from backend import handle_userinput, get_pdf_text, get_text_chunks, get_vectors
 from htmlTemplates import css, bot_template, user_template
 from dotenv import load_dotenv
 
-headers = {
-    "authorization": st.secrets["OPENAI_API_KEY"],
-    "content-type": "application/json"
-}
-
-
 def main():
     load_dotenv()
     st.set_page_config(page_title="Chat with multiple PDFs", page_icon=":books:")
