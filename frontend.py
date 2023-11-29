@@ -4,7 +4,7 @@ from htmlTemplates import css, bot_template, user_template
 from dotenv import load_dotenv
 
 headers = {
-    "authorization": st.secrets["OPENAI_API_KEY_token"],
+    "authorization": st.secrets["OPENAI_API_KEY"],
     "content-type": "application/json"
 }
 
