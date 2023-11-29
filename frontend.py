@@ -3,6 +3,11 @@ from backend import handle_userinput, get_pdf_text, get_text_chunks, get_vectors
 from htmlTemplates import css, bot_template, user_template
 from dotenv import load_dotenv
 
+headers = {
+    "authorization": st.secrets["OPENAI_API_KEY_token"],
+    "content-type": "application/json"
+}
+
 
 def main():
     load_dotenv()
