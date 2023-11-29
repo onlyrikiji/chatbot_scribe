@@ -2,10 +2,14 @@ import streamlit as st
 from backend import handle_userinput, get_pdf_text, get_text_chunks, get_vectorstore, get_conversation_chain
 from htmlTemplates import css, bot_template, user_template
 from dotenv import load_dotenv
+import os
+
+# Set your environment variables directly
+os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 
 def main():
-    load_dotenv()
     st.set_page_config(page_title="Chat with multiple PDFs", page_icon=":books:")
+
     st.write(css, unsafe_allow_html=True)
 
     if "conversation" not in st.session_state:
