@@ -3,7 +3,6 @@ from backend import handle_userinput, get_pdf_text, get_text_chunks, get_vectors
 from htmlTemplates import css, bot_template, user_template
 
 def main():
-   
     st.set_page_config(page_title="Chat with multiple PDFs", page_icon=":books:")
     st.write(css, unsafe_allow_html=True)
 
