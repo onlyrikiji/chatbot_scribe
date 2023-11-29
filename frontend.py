@@ -1,8 +1,10 @@
 import streamlit as st
 from backend import handle_userinput, get_pdf_text, get_text_chunks, get_vectorstore, get_conversation_chain
 from htmlTemplates import css, bot_template, user_template
+from dotenv import load_dotenv
 
 def main():
+    load_dotenv()
     st.set_page_config(page_title="Chat with multiple PDFs", page_icon=":books:")
     st.write(css, unsafe_allow_html=True)
 
@@ -32,7 +34,7 @@ def main():
                 st.session_state.conversation = get_conversation_chain(vectorstore)
 
     user_question = st.text_input("Ask a question about your documents:")
-
+    
     if user_question:
         st.session_state.chat_history = handle_userinput(user_question, st.session_state.conversation)
 
