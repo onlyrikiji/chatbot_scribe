@@ -1,3 +1,5 @@
+import streamlit as st
+
 css = '''
 <style>
 .chat-message {
@@ -10,25 +12,39 @@ css = '''
     background-color: #475063
 }
 .chat-message .avatar {
-  width: 20%;
+    width: 20%;
 }
 .chat-message .avatar img {
-  max-width: 78px;
-  max-height: 78px;
-  border-radius: 50%;
-  object-fit: cover;
+    max-width: 78px;
+    max-height: 78px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 .chat-message .message {
-  width: 80%;
-  padding: 0 1.5rem;
-  color: #fff;
+    width: 80%;
+    padding: 0 1.5rem;
+    color: #fff;
+}
+
+.stButton>button {
+    background-color: #C3E0E5;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
 }
 '''
 
 bot_template = '''
 <div class="chat-message bot">
     <div class="avatar">
-        <img src="https://i.ibb.co/cN0nmSj/Screenshot-2023-05-28-at-02-37-21.png" style="max-height: 78px; max-width: 78px; border-radius: 50%; object-fit: cover;">
+        <img src="https://i.ibb.co/74sRG2Y/SCRIBE-1.png" style="max-height: 78px; max-width: 78px; border-radius: 50%; object-fit: cover;">
     </div>
     <div class="message">{{MSG}}</div>
 </div>
@@ -37,7 +53,7 @@ bot_template = '''
 user_template = '''
 <div class="chat-message user">
     <div class="avatar">
-        <img src="https://i.ibb.co/rdZC7LZ/Photo-logo-1.png">
+        <img src="https://i.ibb.co/CmMFD9h/SCRIBE-3.png">
     </div>    
     <div class="message">{{MSG}}</div>
 </div>
