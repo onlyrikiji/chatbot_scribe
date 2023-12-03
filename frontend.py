@@ -4,24 +4,27 @@ from htmlTemplates import css, bot_template, user_template
 from dotenv import load_dotenv
 import os
 
-# Set your environment variables directly
-os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 
 def main():
-    st.set_page_config(page_title="Chat with multiple PDFs", page_icon=":books:")
-
+    st.set_page_config(page_title="SCRIBE!", page_icon=":books:")
     st.write(css, unsafe_allow_html=True)
+    
+    # Add your project logo
+    logo = st.image("https://i.ibb.co/44w9sk1/extralong.png", use_column_width=True)
 
     if "conversation" not in st.session_state:
         st.session_state.conversation = None
     if "chat_history" not in st.session_state:
         st.session_state.chat_history = None
 
-    st.header("Chat with multiple PDFs :books:")
+    st.header("Review with your own PDF using SCRIBE! :books:")
 
     # Sidebar
     with st.sidebar:
-        st.subheader("Your documents")
+        # Add your project logo
+        logo = st.image("https://i.ibb.co/k3Jt1km/scribe.png", use_column_width=True)
+
+        st.subheader("Add your PDF reviewer here!")
         pdf_docs = st.file_uploader("Upload your PDFs here and click on 'Process'", accept_multiple_files=True)
         if st.button("Process"):
             with st.spinner("Processing"):
@@ -37,7 +40,7 @@ def main():
                 # create conversation chain
                 st.session_state.conversation = get_conversation_chain(vectorstore)
 
-    user_question = st.text_input("Ask a question about your documents:")
+    user_question = st.text_input("Ask a question based on your PDF reviewer:")
     
     if user_question:
         st.session_state.chat_history = handle_userinput(user_question, st.session_state.conversation)
