@@ -50,5 +50,5 @@ Follow These Steps:
 Streamlit Link: https://chatbotscribe-jc7nnd6o2tymhrrphpbrut.streamlit.app/
 
 Video: 
-[demostreamlit.webm](https://github.com/onlyrikiji/chatbot_scribe/assets/131771604/6e4acaf7-926c-4d53-a634-86b6efbacb28)
+[demostreamlit.webm](https://github.com/onlyrikiji/chatbot_scribe/assets/131771604/5ad3b106-ddd7-4344-943c-87a393681eb5)
 
