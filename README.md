@@ -49,6 +49,6 @@ Follow These Steps:
 
 Streamlit Link: https://chatbotscribe-jc7nnd6o2tymhrrphpbrut.streamlit.app/
 
-Video: 
+Video (Process start at 25 sec): 
 [demostreamlit.webm](https://github.com/onlyrikiji/chatbot_scribe/assets/131771604/5ad3b106-ddd7-4344-943c-87a393681eb5)
 
