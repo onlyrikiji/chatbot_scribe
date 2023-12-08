@@ -44,7 +44,7 @@ Follow These Steps:
 
 4. Once the process is complete, ask a question based on the PDF you uploaded.
 
-
+***
 ## Demo
 
 Streamlit Link: https://chatbotscribe-jc7nnd6o2tymhrrphpbrut.streamlit.app/
